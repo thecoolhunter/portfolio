@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aman Mulla | Portfolio</title>
+	<link rel="icon" type="image/x-icron" href="resume.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Aman Mulla</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" src="IMG_1118.HEIC">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Aman Mulla</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Web Developer  ',
+						'Frontend Engineer  ',
+						'Freelancer   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Software Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a>  -->
+							<a href="https://github.com/thecoolhunter" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="IMG_1212.HEIC" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Aman Mulla</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Software Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>1 Year 9 Months</span></p>
+										<!-- <p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p> -->
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>C#</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JavaScript</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Vue.JS</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>GraphQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With nearly 2 years of diverse experience in software engineering and a Bachelor's degree in Computer Engineering, currently enrolled in a Master's program in Computer Science. Proficient in DOTNET, Vue.js, JavaScript, and PowerShell scripting, with proficiency in system deployment, application development, and interfacing multi-disciplinary teams. Successfully emphasized user experiences, regulated process flows, and recently led high-impact projects that ultimately contributed to efficiency and customer satisfaction. Aspires to learn and innovate continually in the software development arena. </p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Frontend Developer</span></li>
+									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>DOTNET, JavaScript, Vue.JS, SQL &amp; GraphQL</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>MS-Office, Excel, Git, JIRA, Azure Boards &amp; PowerShell</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Swimming</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<!-- <p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p> -->
+								<p><a href="https://www.linkedin.com/in/aman-mulla-5347aa1b2/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Associate Software Engineer with 1.5+ years of experience driving software development and system optimization. Proven expertise in DOTNET, Vue.js, JavaScript, and PowerShell scripting, with a strong focus on enhancing deployment processes and user experience. Skilled in cross-functional collaboration, documentation, and implementing innovative solutions that improve efficiency and user satisfaction.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2024</span>
+						<h2>Associate Software Engineer</h2>
+						<span class="position">NEC Software Solution India PVT LTD</span>
+						<p class="mt-4">NEC, NEC Group under the Solution for Society principle delivers safety, security, fairness and efficiency to our society with our partners around the globe. 
+							<ul>
+								<li>Enhanced system deployment process by developing 10+ new PowerShell scripts, which streamlined the application
+									setup procedure and amended overall efficiency for team members managing deployments.
+									</li>
+								<li>Designed and implemented 4 new screens for a Single Page Application, achieving a 50% reduction in user error
+									reports within the first month, contributing to higher user retention and satisfaction levels.</li>
+								<li>Created comprehensive documentation detailing deployment procedures and maintenance practices for newly
+									developed tools, resulting in onboarding times being shortened by approximately one week for future engineers
+									joining the organization.
+									</li>
+								<li>
+									Collaborated with cross-functional teams including QA engineers and product managers daily while gathering
+requirements for new features; initiated discussions that shaped feature enhancements which are now part of
+user-facing applications.
+
+								</li>
+								<li>
+									Formulated testing protocols for new application features that increased detection of potential security
+vulnerabilities by three times during early stages of deployment compared to previous methods used across
+projects.
+								</li>
+								<li>
+									Pioneered on a POC wherein pioneered a fully functional app in DotNet MAUI.
+								</li>
+								<li>
+									Integrated third-party APIs into existing systems to enhance functionality, adding two major features within three
+weeks while maintaining high code quality standards recognized by senior developers as exemplary practice.
+
+								</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2022</span>
+						<h2>Technical Development and Automation Testing </h2>
+						<span class="position">Startup Writer</span>
+						<p class="mt-4">Startup Writer is a content marketing company focused on helping startups build effective content strategies that drive revenue and growth. 
+							<ul>
+								<li>Established a rigorous project maintenance review system across deployment and testing teams, facilitating a 30%
+									reduction in feature-related bugs and enhancing overall user satisfaction through improved engagement metrics and faster
+									resolution times.</li>
+								<li>Orchestrated a series of training sessions for the Technical Development and Automation Testing team, improving
+									knowledge of automation tools and increasing team productivity by 30% during internship period.
+									.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-Present</span>
+    					<h2>Master of Science</h2>
+    					<span class="position">University of Illinois, Springfield</span>
+    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2022</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Terna Engineering College</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017-2018</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">St.Mary's Junior College</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="AmanMulla.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the projects made by me over.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/everestcapitalfunds/evefin" class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_RVy7JGXmrQubxqpHHWOWRgtloqCS_K0Aw&s');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/everestcapitalfunds/evefin">Everest Finance Capital</a></h3>
+                <p>Developed a website for the organization with full functionality according to the requirements from hte clients.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/kasipavankumar/rustic-medico" class="block-20 zoom-effect" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNDHURqTze-gmppQVvzFM25jRb0kxGsM6iXg&s');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/kasipavankumar/rustic-medico">Rustic Medico</a></h3>
+                <p>Developed a responsive and modular admin dashboard for pharmacy inventory management, featuring real-time stock tracking, automated reorder alerts, and customizable reporting tools. Implemented user-friendly interfaces for efficient data entry and retrieval, resulting in improved inventory accuracy and reduced operational costs.
+				</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/jscrates" class="block-20 zoom-effect" style="background-image: url('data:image/jpeg;base64,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');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/jscrates">JS Crates</a></h3>
+                <p>Innovated a package manager for Node.js using a stateless approach, which has become the standard tool for over 30 projects, driving efficiency improvements and enhancing developer satisfaction across teams. Published the paper as well for this project..</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
+				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div>
+		 </div> -->
+	  </div>
+    </section>
+
+	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	 -->
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Springfield, Illinois, USA</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+1(217)848-4608 </a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">aman.a.mulla@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/1V0kcHX9ima4n9aF-Fj2EtDBC_qbcppNlytAlfR-9z80/prefill" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/aman-mulla-5347aa1b2/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.facebook.com/aman.mulla.7161/"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/_aman_mulla09/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
